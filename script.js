@@ -42,3 +42,11 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+// 팝업 외부 클릭 시 팝업 닫기
+window.addEventListener('click', (event) => {
+  if (popup.style.display === 'block' && !popup.contains(event.target) && !card.contains(event.target)) {
+    popup.style.display = 'none';
+  }
+});
+

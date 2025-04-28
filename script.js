@@ -50,3 +50,8 @@ window.addEventListener('click', (event) => {
   }
 });
 
+window.addEventListener('touchstart', (event) => {
+  if (popup.style.display === 'block' && !popup.contains(event.target) && !card.contains(event.target)) {
+    popup.style.display = 'none';
+  }
+});
